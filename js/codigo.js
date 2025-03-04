@@ -44,7 +44,7 @@ async function buscarFilmes() {
             criarElementos.call(json1);
             
         }else {
-            console.log('passou aqui');
+          
             //Volta com o nome(Melhores Filmes);
             document.querySelector('#artFilho1>h1').textContent='Melhores Filmes:'
             //Apagar elementos existente;
@@ -146,18 +146,18 @@ function criarElementos(){
         document.querySelectorAll('.pJs')[n1].appendChild(i1);
         document.querySelectorAll('.article1')[n1].appendChild(but1);
         document.querySelectorAll('.but1')[n1].appendChild(a1);
-        console.log(this);
+      
         
     }
     
     document.querySelectorAll('.but1>.links').forEach((vl,id)=>{
         //loop com os elementos button e evento click;
         vl.addEventListener('click',function(){
-            console.log(document.querySelectorAll('.but1')[id].parentElement.children[1].textContent)
+           
             localStorage.clear('api');
             localStorage.setItem('api',document.querySelectorAll('.but1')[id].parentElement.children[1].textContent);
            
-            vl.setAttribute('href','./index2.html')
+            vl.setAttribute('href','html2/index2.html');
             
             //fetcApi2(document.querySelectorAll('.but1')[id].parentElement.children[1].textContent);
         })
@@ -173,7 +173,7 @@ function criarElementos(){
      
         const fetch1 = await fetch(`https://api.themoviedb.org/3/search/movie?${keyApi}&language=pt-BR&query=${element1}`);
         const json1 = await fetch1.json();
-        //console.log(json1.results[0].id);
+       
         
         pegaDetalhe(json1.results[0].id);
     }
