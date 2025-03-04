@@ -15,6 +15,7 @@ if(sessionStorage.getItem('ch')!=null) {
     document.querySelector('#buscar').value=sessionStorage.getItem('ch');
     document.querySelector('#buscar').focus();
     document.querySelector('#artFilho1>h1').textContent=sessionStorage.getItem('ch').toUpperCase()+sessionStorage.getItem('ch').slice(1)+":";
+    console.log(sessionStorage.getItem('ch'));
     //buscarFilmes.call(sessionStorage.getItem('ch'));
     sessionStorage.clear();
 }

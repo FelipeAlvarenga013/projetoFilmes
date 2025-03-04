@@ -32,7 +32,7 @@ const http2 = `https://api.themoviedb.org/3/search/movie?${keyApi}&language=pt-B
 
 async function buscaApi() {
     //Buscando api do filmes
-    
+    console.log(localStorage.getItem('api'));
     //api buscada pelo nome do filme;
     const fetc1 = await fetch(`https://api.themoviedb.org/3/search/movie?${keyApi}&language=pt-BR&query=${localStorage.getItem('api')}`);
     //convertendo fetch em json();
