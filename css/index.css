@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+main {
+    width: 100%;
+
+}
+
+main {
+    background-image: linear-gradient(90deg,#8C1F28,#591C21);
+}
+
+header
+nav{
+    
+    padding: 45px;
+    background-color: #242424;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav
+input {
+    
+    width: 20em;
+    padding: 20px 0 20px 10px;
+    font-size: 1em;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius:15px;
+    outline: none;
+}
+
+nav 
+ul{
+    display: flex;
+    list-style: none;
+
+}
+
+ul
+li {
+    font-family: sans-serif;
+    font-size: 2em;
+    align-self: center;
+}
+
+li a {
+    text-decoration:none;
+    color: #f00;
+}
+
+
+/* Stylo da lupa de pesquisa */
+.fa-solid {
+    color: #fff;
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+
+/* stylos do corpo */
+
+section
+h1 {
+    padding: 20px 0;
+    font-family: sans-serif;
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* Stylos de todos os hover(ao passar por cima) */
+   
+
+nav
+input:focus {
+    
+    border-width: 3px;
+    border-style: solid;
+    border-left-color: rgba(255, 0, 0, 0.815);
+    border-right-color: rgba(255, 0, 0, 0.815);
+    border-bottom-color: #0066ffc7;
+    border-top-color: #0066ffc7;
+    animation-name: ex1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+ul
+li
+a:hover {
+    border-radius: 50%;
+    box-shadow: 0px 10px 15px 2px #D92525;
+    animation-name: ex2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+/* Estilo para imagems do filmes tela principal */
+#secFilho1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.article1 {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #000;
+    padding: 10px 10px 10px 10px;
+}
+
+
+.but1 {
+    
+    width: 100%;
+    border: none;
+    font-weight: bold;
+}
+
+
+.but1>
+.links {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.pJs {
+    display: flex;
+    color: #fff;
+    font-family: sans-serif;
+    justify-content: left ;
+    align-items: end;
+    flex-direction: row-reverse;
+    margin: 10px 0;
+}
+
+.pJs>i::before {
+    color: red;
+    font-size: .8em;
+    padding-right: 5px;
+}
+
+.h2Js {
+    height: 50px;
+    color: #fff;
+    font-family:sans-serif;
+}
+
+
+
+/*:Hovers  */
+
+.but1:hover {
+    color: #fff;
+    width: 95%;
+    border-radius: 40%;
+    transition-duration: .5s;
+    background-color: #8C1F28;
+}
+
+
+/* stylo com animador */
+
+@keyframes ex1 {
+    to{border-bottom-color: rgba(255, 0, 0, 0.815);
+        border-top-color: rgba(255, 0, 0, 0.815);
+        border-left-color: #0066ffc7;
+        border-right-color: #0066ffc7;}
+    from{border-left-color: rgba(255, 0, 0, 0.815);
+        border-right-color: rgba(255, 0, 0, 0.815);
+        border-bottom-color: #0066ffc7;
+        border-top-color: #0066ffc7;}
+    
+    
+}
+@keyframes ex2 {
+    to{box-shadow: 0px 10px 15px 2px #D92525;}
+    from{box-shadow: 0px 10px 15px 2px#0066ffc7;}
+    to{box-shadow: 0px 10px 15px 2px #D92525;}
+    
+}
+
+
+
+
+/* Stylo par telas menores */
+
+/* Stylo para tela 538px */
+
+@media screen and (max-width: 580px) {
+    
+    
+    header
+    nav{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 190px;
+        flex-direction: row;
+            
+    }
+
+    nav
+    form {
+       
+        height: 60px;
+
+    }
+
+    form
+    input {
+        flex-basis: 20px;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    
+    
+    nav
+    form{
+        flex-basis: 70%;
+            
+    }
+
+
+}
