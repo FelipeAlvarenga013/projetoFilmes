@@ -11,13 +11,13 @@ const http2 = `https://api.themoviedb.org/3/search/movie?${keyApi}&language=pt-B
 
 //Funcão de buscar filmes pelo pesquisar;
 
-if(sessionStorage.getItem('ch')!=null) {
-    document.querySelector('#buscar').value=sessionStorage.getItem('ch');
+if(localStorage.getItem('ch')!=null) {
+    document.querySelector('#buscar').value=localStorage.getItem('ch');
     document.querySelector('#buscar').focus();
-    document.querySelector('#artFilho1>h1').textContent=sessionStorage.getItem('ch').toUpperCase()+sessionStorage.getItem('ch').slice(1)+":";
-    console.log(sessionStorage.getItem('ch'));
+    document.querySelector('#artFilho1>h1').textContent=localStorage.getItem('ch').toUpperCase()+localStorage.getItem('ch').slice(1)+":";
+    console.log(localStorage.getItem('ch'));
     //buscarFilmes.call(sessionStorage.getItem('ch'));
-    sessionStorage.clear();
+    localStorage.clear();
 }
 
 document.querySelector('#buscar').addEventListener('input',function(){

@@ -5,12 +5,10 @@
 
 const n11 = document.querySelector('#buscar').addEventListener('input',function(){
     
-    sessionStorage.clear();
-    sessionStorage.setItem('ch',this.value);
+    localStorage.setItem('ch',this.value);
     window.history.back();
     this.focus();
 
-    
 })
 
 //Evento de barra de pesquisa, Assim que aperta;
