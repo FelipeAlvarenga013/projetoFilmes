@@ -158,7 +158,7 @@ function criarElementos(){
             localStorage.clear('api');
             localStorage.setItem('api',document.querySelectorAll('.but1')[id].parentElement.children[1].textContent);
            
-            vl.setAttribute('href','html2/index2.html');
+            vl.setAttribute('href','./index2.html');
             
             //fetcApi2(document.querySelectorAll('.but1')[id].parentElement.children[1].textContent);
         })
